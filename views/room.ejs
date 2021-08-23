@@ -8,6 +8,25 @@
     <script>
         const ROOM_ID = "<%= roomId %>"
         const NAME = "<%= name %>"
+
+        function addNewMember() {
+            let email = prompt("Please enter Person Email address", "");
+            let roomId = ROOM_ID;
+            let obj = {
+                'emailId': email,
+                'roomId': ROOM_ID
+            };
+            fetch("https://www.bharatinformatics.in/bussiness/bussinessOperations/addNewMember.php", {
+                    method: 'POST',
+                    body: JSON.stringify(obj)
+                }).then(response => response.json())
+                .then(data => console.log(data));
+
+
+
+
+
+        }
     </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
@@ -37,9 +56,9 @@
     <div class="main">
         <div class="main__left">
             <div class="">
-                
-                    <h5 style="text-align: center;">Dev and Maintaing By Samanta,A. Do not use this for bussiness operations.</h5>
-               
+                <div class="">
+                    <h5>Developed by Animesh, Not to use for bussiness perpouse as messages over the channel are not encrypted</h5>
+                </div>
             </div>
             <div class="main__videos">
                 <div id="video-grid">
@@ -64,7 +83,7 @@
                     </div>
                     <div class="main__controls__button">
                         <i class="fas fa-user-friends"></i>
-                        <span>Participants</span>
+                        <span onclick="addNewMember()">Add New Member</span>
                     </div>
                     <div class="main__controls__button">
                         <i class="fas fa-comment-alt"></i>
@@ -93,6 +112,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
