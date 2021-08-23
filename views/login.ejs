@@ -51,7 +51,6 @@
     
     img.avatar {
         width: 40%;
-        height:50%;
         border-radius: 50%;
     }
     /*set padding to the container*/
@@ -79,7 +78,7 @@
 </style>
 
 <body>
-<div style="height:100%">
+
     <h2 style="text-align: center;">Red Carpet By Falcon</h2>
     <!--Step 1 : Adding HTML-->
     <form method="post" action="/authenticate">
@@ -94,17 +93,33 @@
 
             <label><b>Password</b></label>
             <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
-            <label><b>Hall Id</b></label>
+            <label id="hallable"><b>Hall Id</b></label>
             <input type="text" placeholder="Enter Hall Id" id="roomId" name="roomId">
-                   <input type="checkbox" checked="checked"> Create New Room
             <button type="submit">Join</button>
-            
+
         </div>
 
-        
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
     </form>
- <h5 style="text-align: center;">Developed by Samanta,A (Your data is secured with me.)</h5>
-   </div>
+    <script>
+        function myFunction() {
+            // Get the checkbox
+            var checkBox = document.getElementById("myCheck");
+            // Get the output text
+            var text = document.getElementById("roomId");
+            hallable
+
+            // If the checkbox is checked, display the output text
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
