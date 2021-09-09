@@ -44,7 +44,7 @@ app.post('/authenticate', (req, res) => {
 
             let roomId;
             if (roomIdByUser == "" || roomIdByUser == null) {
-                roomId = uuidV4()
+                roomId = "artbrushbyIshaLive"
                 axios.post('https://www.bharatinformatics.in/bussiness/bussinessOperations/registerRoom.php', {
                     "emailId": email,
                     "roomId": roomId,
