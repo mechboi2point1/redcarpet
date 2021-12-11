@@ -20,12 +20,11 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
 
-    if (req.headers.HARD_TOKEN == '' || req.headers.SOFT_TOKEN == '') {
+   
         let roomId = uuidV4()
         res.redirect(`/${roomId}`)
-    } else {
-        res.redirect(`/login`)
-    }
+   
+       
 })
 app.get('/login', (req, res) => {
     res.render('login');
