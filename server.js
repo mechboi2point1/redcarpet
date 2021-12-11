@@ -85,29 +85,11 @@ app.post('/authenticate', (req, res) => {
 })
 
 app.get('/:room', (req, res) => {
-    let softToken = req.query.softtoken
-    let userToken = req.query.usertoken;
-    let roomIdURL = req.params.room;
-    let email = req.query.email;
-
-    axios.post('https://www.bharatinformatics.in/bussiness/bussinessOperations/authenticateRoomUser.php', {
-        "userToken": userToken,
-        "emailId": email,
-        "roomId": roomIdURL,
-        "softToken": softToken
-    }).then(res1 => {
-
-            if (res1.data == '') {
-                res1.data = 'User'
-            }
-            console.log(res1.data)
-            res.render('room', { roomId: req.params.room, name: res1.data })
-        },
-        err => {
-            console.log(err.data)
-            res.render('error', { Message: 'Failed to verify you.' })
-        }
-    )
+    
+            res.render('room', { roomId: req.params.room})
+       
+           
+    
 
 
 
