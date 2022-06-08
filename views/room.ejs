@@ -53,19 +53,20 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="main__left">
-            <div class="">
-                <div class="">
-                    <b>Dipshikha Sangha Remote Meeting Netwokrk</b>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <b>Dipshikha Sangha Remote Meeting Netwokrk</b>
+
             </div>
-            <div class="main__videos">
-                <div id="video-grid">
+            <div class="row">
+
+                <div clas="col-12" id="video-grid">
 
                 </div>
             </div>
-            <div class="main__controls">
+            <div class="row">
                 <div class="main__controls__block">
                     <div onclick="muteUnmute()" class="main__controls__button main__mute_button">
                         <i class="fas fa-microphone"></i>
@@ -77,15 +78,15 @@
                     </div>
                 </div>
                 <div class="main__controls__block">
-                    <div class="main__controls__button">
+                    <div class="main__controls__button" hidden>
                         <i class="fas fa-shield-alt"></i>
                         <span>Security</span>
                     </div>
-                    <div class="main__controls__button">
+                    <div class="main__controls__button" hidden>
                         <i class="fas fa-user-friends"></i>
                         <span onclick="addNewMember()">Add New Member</span>
                     </div>
-                    <div class="main__controls__button">
+                    <div class="main__controls__button" hidden>
                         <i class="fas fa-comment-alt"></i>
                         <span>Chat</span>
                     </div>
@@ -112,7 +113,7 @@
             </div>
         </div>
     </div>
-<small>This Application is property of Dipshikha Sangha Club and is maintained by Animesh Samanta.</small>
+    <small>This Application is property of Dipshikha Sangha Club and is maintained by Animesh Samanta.</small>
 </body>
 
 </html>
